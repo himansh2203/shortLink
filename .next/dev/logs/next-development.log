@@ -1,0 +1,762 @@
+[00:00:12.903] Server  LOG      ✓ Ready in 11.2s
+[00:00:16.130] Server  LOG      ○ Compiling / ...
+[00:00:22.149] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.185] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__7dc16f87._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.194] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.209] Server  WARN    Error: Route "/api/links/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:26.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.144] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:55.024] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.026] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.027] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.029] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:00:55.053] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.056] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.103] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\node_modules_next_af283ba7._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.108] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.114] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.117] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.120] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.124] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.128] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:55.130] Server  ERROR   TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+[00:01:12.169] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.170] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.172] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.174] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:01:12.185] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.188] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.190] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\node_modules_next_af283ba7._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.192] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.195] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.198] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.201] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.203] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.210] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:12.212] Server  ERROR   TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+[00:03:17.800] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:17.802] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:17.803] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:17.806] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:03:53.020] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:53.021] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:53.023] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:03:53.026] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:01.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:01.648] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:01.649] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:01.651] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:01.654] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:05.830] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:05.831] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__7dc16f87._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:05.832] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:05.836] Server  WARN    Error: Route "/api/links/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:10.557] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:10.559] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__7dc16f87._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:10.560] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:10.564] Server  WARN    Error: Route "/api/links/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:13.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:18.186] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:18.188] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__7dc16f87._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:18.191] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:18.193] Server  WARN    Error: Route "/api/links/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:22.813] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:22.815] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__7dc16f87._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:22.816] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:04:22.821] Server  WARN    Error: Route "/api/links/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:05:36.484] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:41.907] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:22.556] Server  LOG      ✓ Compiled in 3s
+[00:07:30.667] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:08.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:13.700] Server  LOG      ✓ Compiled in 1078ms
+[00:09:19.775] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:46.751] Server  LOG      ✓ Compiled in 583ms
+[00:10:49.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:26.406] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:11:26.409] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:11:26.414] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:11:26.421] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:11:30.655] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:43.421] Server  LOG      ✓ Compiled in 213ms
+[00:13:49.650] Server  LOG      ✓ Compiled in 555ms
+[00:13:53.758] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:19.860] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:27.369] Server  LOG      ✓ Compiled in 28ms
+[00:16:38.162] Server  LOG      ✓ Compiled in 924ms
+[00:16:41.285] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:57.116] Server  LOG      ✓ Compiled in 322ms
+[00:19:01.839] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:10.838] Server  LOG      ✓ Compiled in 13ms
+[00:19:24.002] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:44.176] Server  LOG      ✓ Compiled in 20ms
+[00:19:49.011] Server  LOG      ✓ Compiled in 10ms
+[00:20:07.183] Server  LOG      ✓ Compiled in 19ms
+[00:20:14.309] Server  LOG      ✓ Compiled in 20ms
+[00:20:17.962] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:23.289] Server  LOG      ✓ Compiled in 240ms
+[00:20:32.078] Server  LOG      ✓ Compiled in 9ms
+[00:20:35.311] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:40.788] Server  LOG      ✓ Compiled in 13ms
+[00:21:55.080] Server  LOG      ✓ Compiled in 292ms
+[00:22:06.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:55.841] Server  LOG      ✓ Compiled in 526ms
+[00:23:00.280] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:10.518] Server  LOG      ✓ Compiled in 15ms
+[00:23:13.199] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:27.727] Server  LOG      ✓ Compiled in 11ms
+[00:23:34.996] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:38.749] Server  LOG      ○ Compiling /_not-found/page ...
+[00:23:44.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:49.059] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:50.188] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:07.438] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:07.440] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:07.442] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:07.446] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:24:14.277] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:14.278] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:14.279] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:14.281] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:24:16.805] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:23.094] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:28.515] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:30.499] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:42.862] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:47.223] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:36.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:41.045] Server  LOG      ○ Compiling /code/[code] ...
+[00:32:41.642] Server  ERROR    ⨯ ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:32:41.830] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:32:44.678] Server  LOG      ○ Compiling /_error ...
+[00:32:48.172] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:32:49.170] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:32:52.712] Browser ERROR   uncaughtError: Error: ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:32:53.178] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:32:53.178] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:48.533] Server  ERROR    ⨯ ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:48.546] Server  ERROR    ⨯ ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:49.180] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:51.174] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:57.359] Server  ERROR    ⨯ ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:57.680] Browser ERROR   uncaughtError: Error: ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:33:57.860] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:33:57.860] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.472] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.627] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:23.627] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.592] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.592] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.592] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.592] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.592] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.593] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.701] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:24.749] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.181] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.181] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.181] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.182] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.210] Browser ERROR   uncaughtError: Error: ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:25.389] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:25.389] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:26.193] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:26.193] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:26.269] Browser ERROR   uncaughtError: Error: ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:34:26.445] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:26.445] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:27.171] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:44.176] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:44.176] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:44.176] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:44.176] Browser ERROR   ./app/code/[code]/page.tsx:2:1
+Module not found: Can't resolve '../../../components/StatsActions'
+  1 | import React from "react";
+> 2 | import StatsActions from "../../../components/StatsActions";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | type Props = { params: { code: string } };
+  5 |
+
+https://nextjs.org/docs/messages/module-not-found
+[00:34:54.591] Server  LOG      ✓ Compiled in 589ms
+[00:34:54.846] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:34:54.846] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/shared/lib/router/router.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:54.847] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:34:54.849] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:34:54.849] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/shared/lib/router/router.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:54.849] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:34:56.831] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:56.967] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:04.560] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:06.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

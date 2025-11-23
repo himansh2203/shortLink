@@ -1,0 +1,26 @@
+{
+  "name": "next-url-shortener",
+  "version": "1.0.0",
+  "description": "A URL shortener application built with Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seed": "ts-node scripts/seed.ts"
+  },
+  "dependencies": {
+    "next": "^16.0.3",
+    "pg": "^8.0.0",
+    "prisma": "^3.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "ts-node": "latest",
+    "typescript": "latest"
+  },
+  "license": "MIT"
+}
