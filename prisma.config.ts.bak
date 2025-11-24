@@ -1,0 +1,16 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+let prisma: any;
+try {
+  // require at runtime to avoid TS import-time type resolution issues during Next build
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { PrismaClient } = require('@prisma/client');
+  prisma = new PrismaClient();
+} catch (e) {
+  // During type-check/build the generated client may not be present; export a stub to avoid errors.
+  prisma = {} as any;
+}
+
+export { prisma };

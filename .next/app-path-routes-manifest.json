@@ -1,0 +1,14 @@
+{
+  "/[code]/route": "/[code]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/healthz/route": "/api/healthz",
+  "/api/links/[code]/route": "/api/links/[code]",
+  "/api/links/route": "/api/links",
+  "/api/redirect/[code]/route": "/api/redirect/[code]",
+  "/api/shorten/route": "/api/shorten",
+  "/api/stats/[code]/route": "/api/stats/[code]",
+  "/dashboard/[id]/page": "/dashboard/[id]",
+  "/dashboard/page": "/dashboard",
+  "/page": "/"
+}

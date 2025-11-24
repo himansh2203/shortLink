@@ -1,6 +1,4 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '../lib/prismaClient';
 
 async function main() {
     // Seed initial data
@@ -20,15 +18,24 @@ async function main() {
             shortCode: 'ghb',
             clicks: 0,
         },
+        {
+            originalUrl: 'https://vercel.com',
+            shortCode: 'vercel',
+            clicks: 0,
+        },
     ];
 
-    for (const url of urls) {
-        await prisma.link.create({
-            data: url,
-        });
+    for (const u of urls) {
+        const data = {
+            code: u.shortCode,
+            url: u.originalUrl,
+            clicks: u.clicks ?? 0,
+        };
+        // narrow to any if Prisma typings still complain in build
+        await (prisma as any).link.create({ data });
     }
 
-    console.log('Database seeded with initial URLs');
+    console.log('Seeding complete');
 }
 
 main()
@@ -37,5 +44,7 @@ main()
         process.exit(1);
     })
     .finally(async () => {
-        await prisma.$disconnect();
+        try {
+            await (prisma as any).$disconnect?.();
+        } catch {}
     });

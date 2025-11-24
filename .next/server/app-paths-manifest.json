@@ -1,0 +1,14 @@
+{
+  "/[code]/route": "app/[code]/route.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/healthz/route": "app/api/healthz/route.js",
+  "/api/links/[code]/route": "app/api/links/[code]/route.js",
+  "/api/links/route": "app/api/links/route.js",
+  "/api/redirect/[code]/route": "app/api/redirect/[code]/route.js",
+  "/api/shorten/route": "app/api/shorten/route.js",
+  "/api/stats/[code]/route": "app/api/stats/[code]/route.js",
+  "/dashboard/[id]/page": "app/dashboard/[id]/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js"
+}

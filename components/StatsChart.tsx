@@ -1,37 +1,49 @@
-import React from 'react';
-import { Line } from 'react-chartjs-2';
+'use client';
+import React from "react";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 interface StatsChartProps {
-  data: {
-    labels: string[];
-    values: number[];
-  };
+  labels: string[];
+  values: number[];
 }
 
-const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
-  const chartData = {
-    labels: data.labels,
+export default function StatsChart({ labels, values }: StatsChartProps) {
+  const data = {
+    labels,
     datasets: [
       {
-        label: 'Click Statistics',
-        data: data.values,
-        fill: false,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
+        label: "Clicks",
+        data: values,
+        borderColor: "#2563eb",
+        backgroundColor: "rgba(37,99,235,0.08)",
+        tension: 0.25,
+        fill: true,
       },
     ],
   };
 
   const options = {
     responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false }, title: { display: false } },
+    scales: { x: { display: true }, y: { display: true, beginAtZero: true } },
   };
 
-  return <Line data={chartData} options={options} />;
-};
-
-export default StatsChart;
+  return (
+    <div style={{ width: "100%", height: 260 }}>
+      <Line data={data} options={options} />
+    </div>
+  );
+}
