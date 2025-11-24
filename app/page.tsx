@@ -1,9 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import UrlForm from "../components/UrlForm";
 import UrlList from "../components/UrlList";
 
-export default function DashboardPage() {
+type Props = { params: { code: string } };
+
+export default function DashboardPage({ params }: Props) {
+  const code = String(params?.code ?? "");
+  const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const url = `${base.replace(/\/$/, "")}/api/links/${encodeURIComponent(code)}`;
+
   const [links, setLinks] = useState<any[] | null>(null);
   const [loading, setLoading] = useState(false);
 
