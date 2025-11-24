@@ -1,24 +1,22 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getStatsByCode } from "@/lib/db";
+import { NextResponse } from "next/server";
+import { getLinkStats } from "@/lib/db";
 
 export async function GET(
-  _req: NextRequest,
-  { params }: { params: { code: string } }
+  req: Request,
+  context: { params: Promise<{ code: string }> } // params as Promise
 ) {
-  const code = String(params?.code ?? "");
-  if (!code) {
+  const params = await context.params; // await the promise
+  const code = String(params.code);
+
+  const stats = await getLinkStats(code);
+  if (!stats) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  try {
-    const stats = await getStatsByCode(code);
-    if (!stats) {
-      return NextResponse.json({ error: "Not found" }, { status: 404 });
-    }
-
-    return NextResponse.json(stats);
-  } catch (err) {
-    console.error("Stats fetch error:", err);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
-  }
+  return NextResponse.json(stats);
 }
+// --- CREATE LINK ---
+// --- GET LINK BY CODE ---
+// --- DELETE LINK ---
+// --- INCREMENT CLICK ---
+// --- GET STATS BY CODE ---
