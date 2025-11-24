@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "latest",
+    "@types/pg": "^8.15.6",
     "@types/react": "latest",
     "prisma": "^7.0.0",
     "ts-node": "latest",
