@@ -1,7 +1,7 @@
 import { Pool } from "pg";
 
 // PostgreSQL pool setup
-const pool = new Pool({
+export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
@@ -29,13 +29,20 @@ export async function createLink(code: string, url: string): Promise<Link> {
 // --- GET LINK BY CODE ---
 export async function getLinkByCode(code: string): Promise<Link | null> {
   const res = await pool.query("SELECT * FROM links WHERE code = $1", [code]);
-  return res.rows[0] ?? null;
+  if (!res.rows[0]) return null;
+  return {
+    code: res.rows[0].code,
+    url: res.rows[0].url,
+    createdAt: res.rows[0].created_at,
+    clicks: res.rows[0].clicks,
+    lastClicked: res.rows[0].last_clicked,
+  };
 }
 
 // --- DELETE LINK ---
 export async function deleteLink(code: string): Promise<boolean> {
   const res = await pool.query("DELETE FROM links WHERE code = $1", [code]);
-  // Handle possible null rowCount safely
+  // rowCount is always number in pg, but safe check
   return (res.rowCount ?? 0) > 0;
 }
 
@@ -48,18 +55,29 @@ export async function incrementClick(code: string): Promise<void> {
   );
 }
 
-// --- GET STATS ---
+// --- GET STATS BY CODE ---
 export async function getStatsByCode(
   code: string
 ): Promise<{ clicks: number; lastClicked?: string | null } | null> {
-  const res = await pool.query("SELECT clicks, last_clicked FROM links WHERE code = $1", [code]);
+  const res = await pool.query(
+    "SELECT clicks, last_clicked FROM links WHERE code = $1",
+    [code]
+  );
   if (!res.rows[0]) return null;
-  const { clicks, last_clicked } = res.rows[0];
-  return { clicks, lastClicked: last_clicked ?? null };
+  return {
+    clicks: res.rows[0].clicks,
+    lastClicked: res.rows[0].last_clicked ?? null,
+  };
 }
 
 // --- LIST ALL LINKS ---
 export async function listLinks(): Promise<Link[]> {
   const res = await pool.query("SELECT * FROM links ORDER BY created_at DESC");
-  return res.rows as Link[];
+  return res.rows.map(row => ({
+    code: row.code,
+    url: row.url,
+    createdAt: row.created_at,
+    clicks: row.clicks,
+    lastClicked: row.last_clicked,
+  })) as Link[];
 }
