@@ -1,18 +1,17 @@
-import { NextResponse } from 'next/server';
-import { getStatsByCode } from '@/lib/db';
+import { NextRequest, NextResponse } from "next/server";
+import { getStatsByCode } from "@/lib/db";
 
-export async function GET(request: Request, { params }: { params: { code: string } }) {
-    const { code } = params;
+export async function GET(request: NextRequest, context: any) {
+  const params = await Promise.resolve(context?.params);
+  const code = params?.code;
+  if (!code) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
 
-    try {
-        const stats = await getStatsByCode(code);
+  const stats = await getStatsByCode(String(code));
+  if (!stats) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
 
-        if (!stats) {
-            return NextResponse.json({ error: 'Statistics not found for this code.' }, { status: 404 });
-        }
-
-        return NextResponse.json(stats);
-    } catch (error) {
-        return NextResponse.json({ error: 'An error occurred while fetching statistics.' }, { status: 500 });
-    }
+  return NextResponse.json(stats);
 }
