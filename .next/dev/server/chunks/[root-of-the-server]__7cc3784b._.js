@@ -75,27 +75,63 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 ;
 ;
 const DATA_FILE = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), "data", "links.json");
+// in-memory fallback store (used when file writes are not allowed)
+const inMemory = new Map();
+let persistenceAvailable = true;
 async function readLinks() {
+    if (!persistenceAvailable) {
+        return Array.from(inMemory.values());
+    }
     try {
         const raw = await __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["default"].readFile(DATA_FILE, "utf8");
-        return JSON.parse(raw);
+        const arr = JSON.parse(raw);
+        // populate in-memory cache for fast access
+        inMemory.clear();
+        for (const l of arr)inMemory.set(l.code, l);
+        return arr;
     } catch (e) {
-        if (e.code === "ENOENT") return [];
-        throw e;
+        if (e.code === "ENOENT") {
+            return Array.from(inMemory.values());
+        }
+        console.error("readLinks error, disabling persistence:", e);
+        persistenceAvailable = false;
+        return Array.from(inMemory.values());
     }
 }
 async function writeLinks(links) {
-    await __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["default"].mkdir(__TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].dirname(DATA_FILE), {
-        recursive: true
-    });
-    await __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["default"].writeFile(DATA_FILE, JSON.stringify(links, null, 2), "utf8");
+    if (!persistenceAvailable) {
+        // update memory only
+        inMemory.clear();
+        for (const l of links)inMemory.set(l.code, l);
+        return;
+    }
+    try {
+        await __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["default"].mkdir(__TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].dirname(DATA_FILE), {
+            recursive: true
+        });
+        await __TURBOPACK__imported__module__$5b$externals$5d2f$fs$2f$promises__$5b$external$5d$__$28$fs$2f$promises$2c$__cjs$29$__["default"].writeFile(DATA_FILE, JSON.stringify(links, null, 2), "utf8");
+        // keep in-memory cache in sync
+        inMemory.clear();
+        for (const l of links)inMemory.set(l.code, l);
+    } catch (e) {
+        console.error("writeLinks failed, disabling persistence and using in-memory:", e);
+        persistenceAvailable = false;
+        // fallback to memory
+        inMemory.clear();
+        for (const l of links)inMemory.set(l.code, l);
+    }
 }
 async function listLinks() {
     return readLinks();
 }
 async function getLinkByCode(code) {
+    // quick memory check first
+    const cached = inMemory.get(code);
+    if (cached) return cached;
     const links = await readLinks();
-    return links.find((l)=>l.code === code) ?? null;
+    const found = links.find((l)=>l.code === code) ?? null;
+    if (found) inMemory.set(found.code, found);
+    return found;
 }
 async function getStatsByCode(code) {
     const link = await getLinkByCode(code);
