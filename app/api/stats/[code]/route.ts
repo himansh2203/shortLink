@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getLinkStats } from "@/lib/db";
+import { getStatsByCode } from "@/lib/db";
 
 export async function GET(
   req: Request,
@@ -8,7 +8,7 @@ export async function GET(
   const params = await context.params; // await the promise
   const code = String(params.code);
 
-  const stats = await getLinkStats(code);
+ const stats = await getStatsByCode(code);
   if (!stats) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
