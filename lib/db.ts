@@ -11,19 +11,55 @@ export type Link = {
 
 const DATA_FILE = path.join(process.cwd(), "data", "links.json");
 
+// in-memory fallback store (used when file writes are not allowed)
+const inMemory = new Map<string, Link>();
+let persistenceAvailable = true;
+
 async function readLinks(): Promise<Link[]> {
+  if (!persistenceAvailable) {
+    return Array.from(inMemory.values());
+  }
+
   try {
     const raw = await fs.readFile(DATA_FILE, "utf8");
-    return JSON.parse(raw) as Link[];
+    const arr = JSON.parse(raw) as Link[];
+    // populate in-memory cache for fast access
+    inMemory.clear();
+    for (const l of arr) inMemory.set(l.code, l);
+    return arr;
   } catch (e: any) {
-    if (e.code === "ENOENT") return [];
-    throw e;
+    // if file not found or permission error, fallback to memory
+    if (e.code === "ENOENT") {
+      return Array.from(inMemory.values());
+    }
+    // permission or other errors -> disable persistence and fallback
+    console.error("readLinks error, disabling persistence:", e);
+    persistenceAvailable = false;
+    return Array.from(inMemory.values());
   }
 }
 
 async function writeLinks(links: Link[]) {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(links, null, 2), "utf8");
+  if (!persistenceAvailable) {
+    // update memory only
+    inMemory.clear();
+    for (const l of links) inMemory.set(l.code, l);
+    return;
+  }
+
+  try {
+    await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
+    await fs.writeFile(DATA_FILE, JSON.stringify(links, null, 2), "utf8");
+    // keep in-memory cache in sync
+    inMemory.clear();
+    for (const l of links) inMemory.set(l.code, l);
+  } catch (e) {
+    console.error("writeLinks failed, disabling persistence and using in-memory:", e);
+    persistenceAvailable = false;
+    // fallback to memory
+    inMemory.clear();
+    for (const l of links) in inMemory.set(l.code, l) {}
+  }
 }
 
 export async function listLinks(): Promise<Link[]> {
@@ -31,8 +67,13 @@ export async function listLinks(): Promise<Link[]> {
 }
 
 export async function getLinkByCode(code: string): Promise<Link | null> {
+  // quick memory check first
+  const cached = inMemory.get(code);
+  if (cached) return cached;
   const links = await readLinks();
-  return links.find((l) => l.code === code) ?? null;
+  const found = links.find((l) => l.code === code) ?? null;
+  if (found) inMemory.set(found.code, found);
+  return found;
 }
 
 export async function getStatsByCode(code: string): Promise<{ clicks: number; lastClicked?: string | null } | null> {
