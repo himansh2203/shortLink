@@ -1,22 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getLinkByCode, incrementClick } from "@/lib/db";
 
-export async function GET(req: NextRequest, { params }: { params: { code: string } }) {
-  try {
-    const { code } = params;
-    const link = await getLinkByCode(code);
-
-    if (!link) {
-      return NextResponse.json({ error: "Link not found" }, { status: 404 });
-    }
-
-    // Increment clicks (non-blocking)
-    incrementClick(code).catch(console.error);
-
-    // Redirect
-    return NextResponse.redirect(link.url);
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+export async function GET(request: NextRequest, context: any) {
+  // context.params may be a Promise in some Next versions/tools — normalize it
+  const params = await Promise.resolve(context?.params);
+  const code = params?.code;
+  if (!code) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
+
+  const link = await getLinkByCode(String(code));
+  if (!link) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  try {
+    await incrementClick(String(code));
+  } catch {
+    // ignore increment errors
+  }
+
+  return NextResponse.redirect(link.url);
 }
