@@ -28,11 +28,9 @@ async function readLinks(): Promise<Link[]> {
     for (const l of arr) inMemory.set(l.code, l);
     return arr;
   } catch (e: any) {
-    // if file not found or permission error, fallback to memory
     if (e.code === "ENOENT") {
       return Array.from(inMemory.values());
     }
-    // permission or other errors -> disable persistence and fallback
     console.error("readLinks error, disabling persistence:", e);
     persistenceAvailable = false;
     return Array.from(inMemory.values());
@@ -58,7 +56,7 @@ async function writeLinks(links: Link[]) {
     persistenceAvailable = false;
     // fallback to memory
     inMemory.clear();
-    for (const l of links) in inMemory.set(l.code, l) {}
+    for (const l of links) inMemory.set(l.code, l);
   }
 }
 
