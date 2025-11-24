@@ -1,44 +1,34 @@
-import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { NextRequest, NextResponse } from "next/server";
+import { getLinkByCode, deleteLink } from "@/lib/db";
 
-const DATA_FILE = path.join(process.cwd(), "data", "links.json");
+// GET a link by code
+export async function GET(_req: NextRequest, { params }: { params: { code: string } }) {
+  const code = String(params.code ?? "");
+  if (!code) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-async function readStore() {
   try {
-    const raw = await fs.readFile(DATA_FILE, "utf8");
-    return JSON.parse(raw) as any[];
-  } catch {
-    return [];
+    const link = await getLinkByCode(code);
+    if (!link) return NextResponse.json({ error: "Not found" }, { status: 404 });
+
+    return NextResponse.json(link);
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
-async function writeStore(data: any[]) {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), "utf8");
-}
 
-export async function GET(_req: Request, context: { params?: Promise<{ code: string }> | { code: string } }) {
-  const params = await (context?.params as any);
-  const code = String(params?.code ?? "");
+// DELETE a link by code
+export async function DELETE(_req: NextRequest, { params }: { params: { code: string } }) {
+  const code = String(params.code ?? "");
   if (!code) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-  const store = await readStore();
-  const item = store.find((s: any) => s.code === code || String(s.code).toLowerCase() === code.toLowerCase());
-  if (!item) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  try {
+    const success = await deleteLink(code);
+    if (!success) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-  return NextResponse.json(item);
-}
-
-export async function DELETE(_req: Request, context: { params?: Promise<{ code: string }> | { code: string } }) {
-  const params = await (context?.params as any);
-  const code = String(params?.code ?? "");
-  if (!code) return NextResponse.json({ error: "Not found" }, { status: 404 });
-
-  const store = await readStore();
-  const idx = store.findIndex((s: any) => s.code === code || String(s.code).toLowerCase() === code.toLowerCase());
-  if (idx === -1) return NextResponse.json({ error: "Not found" }, { status: 404 });
-
-  store.splice(idx, 1);
-  await writeStore(store);
-  return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }

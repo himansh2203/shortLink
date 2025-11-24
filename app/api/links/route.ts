@@ -1,47 +1,72 @@
 import { NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { createLink, listLinks, getLinkByCode } from "@/lib/db";
 
-const DATA_FILE = path.join(process.cwd(), "data", "links.json");
 const CODE_REGEX = /^[A-Za-z0-9]{6,8}$/;
 
-async function readStore() {
-  try { const raw = await fs.readFile(DATA_FILE, "utf8"); return JSON.parse(raw); } catch { return []; }
-}
-async function writeStore(data: any[]) {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), "utf8");
-}
-function genCode(len=6){ const chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; let s=""; for(let i=0;i<len;i++) s+=chars[Math.floor(Math.random()*chars.length)]; return s; }
-function validateUrl(u:string){ try{ const url = new URL(u); return url.protocol === "http:" || url.protocol === "https:" }catch{return false}}
-
-export async function GET() {
-  const items = await readStore();
-  return NextResponse.json(items);
+// Generate random 6-character code
+function genCode(len = 6) {
+  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let s = "";
+  for (let i = 0; i < len; i++) s += chars[Math.floor(Math.random() * chars.length)];
+  return s;
 }
 
-export async function POST(req: Request) {
-  const body = await req.json().catch(()=>({}));
-  const url = (body.url || "").trim();
-  let code = body.code ? String(body.code).trim() : "";
-
-  if (!url || !validateUrl(url)) return NextResponse.json({ error: "Invalid or missing url (include http/https)" }, { status: 400 });
-
-  const store = await readStore();
-
-  if (code) {
-    if (!CODE_REGEX.test(code)) return NextResponse.json({ error: "Custom code must be 6-8 alphanumeric" }, { status: 400 });
-    if (store.find((s:any)=>s.code===code)) return NextResponse.json({ error: "Code exists" }, { status: 409 });
-  } else {
-    let attempts=0;
-    do { code = genCode(6); attempts++; if(attempts>50) code = genCode(8); } while (store.find((s:any)=>s.code===code));
+// Validate URL
+function validateUrl(u: string) {
+  try {
+    const url = new URL(u);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
   }
+}
 
-  const created = { code, url, clicks:0, lastClicked:null, createdAt: new Date().toISOString() };
-  store.push(created);
-  await writeStore(store);
+// GET all links
+export async function GET() {
+  try {
+    const links = await listLinks();
+    return NextResponse.json(links);
+  } catch (err) {
+    console.error("GET links error:", err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
+}
 
-  const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
-  const shortUrl = `${origin.replace(/\/$/,"")}/${code}`;
-  return NextResponse.json({ ...created, shortUrl }, { status: 201 });
+// POST create new link
+export async function POST(req: Request) {
+  try {
+    const body = await req.json().catch(() => ({}));
+    const url = (body.url || "").trim();
+    let code = body.code ? String(body.code).trim() : "";
+
+    if (!url || !validateUrl(url)) {
+      return NextResponse.json({ error: "Invalid or missing URL (include http/https)" }, { status: 400 });
+    }
+
+    // Check custom code validity
+    if (code) {
+      if (!CODE_REGEX.test(code)) {
+        return NextResponse.json({ error: "Custom code must be 6-8 alphanumeric" }, { status: 400 });
+      }
+      const existing = await getLinkByCode(code);
+      if (existing) return NextResponse.json({ error: "Code exists" }, { status: 409 });
+    } else {
+      // Auto-generate code until unique
+      let attempts = 0;
+      do {
+        code = genCode(6);
+        attempts++;
+        if (attempts > 50) code = genCode(8);
+      } while (await getLinkByCode(code));
+    }
+
+    const created = await createLink(code, url);
+    const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
+    const shortUrl = `${origin.replace(/\/$/, "")}/${created.code}`;
+
+    return NextResponse.json({ ...created, shortUrl }, { status: 201 });
+  } catch (err) {
+    console.error("POST links error:", err);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }
