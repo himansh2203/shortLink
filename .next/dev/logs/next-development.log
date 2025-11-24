@@ -1,12 +1,6 @@
-[00:00:17.279] Server  LOG      ✓ Ready in 14.6s
-[00:01:37.165] Server  LOG      ○ Compiling / ...
-[00:01:54.878] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:00.030] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:00.040] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:00.231] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:00.236] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:02:02.343] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:02.345] Server  ERROR   D:\agntha Project\next-url-shortener\.next\dev\server\chunks\[root-of-the-server]__4c759a09._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:02.347] Server  ERROR   D:\agntha Project\next-url-shortener\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:02:02.350] Server  WARN    Error: Route "/[code]" used `params.code`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:02:08.051] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:22.354] Server  LOG      ✓ Ready in 17.8s
+[00:00:25.423] Server  LOG      ○ Compiling / ...
+[00:00:51.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:57.804] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:59.378] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:14.150] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
