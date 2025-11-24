@@ -1,11 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getLinkByCode, incrementClick } from "@/lib/db";
+import { NextResponse } from "next/server";
+import { getLinkByCode, deleteLink } from "@/lib/db";
 
 export async function GET(
-  req: NextRequest,
-  context: { params: { code: string } } // make it a plain object
+  req: Request,
+  context: { params: Promise<{ code: string }> }
 ) {
-  const { code } = context.params;
+  const params = await context.params;
+  const code = String(params.code);
   if (!code) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
@@ -15,8 +16,23 @@ export async function GET(
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  // Increment clicks asynchronously, don't block redirect
-  incrementClick(code).catch(console.error);
+  return NextResponse.json(link);
+}
 
-  return NextResponse.redirect(link.url);
+export async function DELETE(
+  req: Request,
+  context: { params: Promise<{ code: string }> }
+) {
+  const params = await context.params;
+  const code = String(params.code);
+  if (!code) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const success = await deleteLink(code);
+  if (!success) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  return NextResponse.json({ ok: true });
 }
